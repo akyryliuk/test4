@@ -47,8 +47,8 @@ a {
     line-height: 30px; }
   .header-top {
     border-bottom: 1px solid rgba(129, 132, 143, 0.3);
-    padding-top: 30px;
-    padding-bottom: 30px; }
+    padding-bottom: 30px;
+    padding-top: 30px; }
     .header-top-wrapper {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -65,9 +65,9 @@ a {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
         .header-top-menu ul a {
@@ -75,6 +75,8 @@ a {
           color: #ffffff;
           text-transform: uppercase;
           font-weight: 600; }
+        .header-top-menu ul li {
+          margin-left: 30px; }
   .header-middle-logo {
     padding-top: 15px;
     margin-bottom: 200px; }
@@ -114,8 +116,6 @@ a {
   /* ----- /section-types-services  ----- */
   /* -----  section-choose  ----- */
   /* ----- /section-choose ----- */
-  /* -----  f  ----- */
-  /* ----- / ----- */
   /* -----  section-product  ----- */
   /* ----- /section-product ----- */
   /* -----  section-buy  ----- */
@@ -127,16 +127,21 @@ a {
   /* -----  section-services  ----- */
   /* ----- /section-services ----- */
   /* -----  section-country  ----- */
-  /* ----- /section-country ----- */ }
+  /* ----- /section-country ----- */
+  /* -----  section-map  ----- */
+  /* ----- /section-map ----- */ }
   .content .section-types-services {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding-bottom: 100px;
-    padding-top: 100px;
+    padding-top: 80px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between; }
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 20px; }
     .content .section-types-services-card {
       width: 360px;
       display: -webkit-box;
@@ -208,7 +213,7 @@ a {
       color: #abacaf; }
   .content .section-product {
     padding-bottom: 100px;
-    padding-top: 100px; }
+    padding-top: 80px; }
     .content .section-product-latest .description {
       width: 520px; }
     .content .section-product-types {
@@ -218,9 +223,12 @@ a {
       display: flex;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
       .content .section-product-types-card {
-        width: 360px; }
+        width: 360px;
+        margin-bottom: 20px; }
         .content .section-product-types-card .image {
           height: 240px; }
           .content .section-product-types-card .image img {
@@ -272,18 +280,22 @@ a {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
       padding-bottom: 100px;
-      padding-top: 100px; }
+      padding-top: 85px; }
     .content .section-buy-card {
       background: #ffffff;
       width: 380px;
-      padding: 70px 60px 70px 40px; }
+      padding: 70px 60px 70px 40px;
+      margin-right: 15px;
+      margin-bottom: 15px; }
       .content .section-buy-card .image {
         color: #abacaf;
         font-size: 32px; }
@@ -323,12 +335,14 @@ a {
         font-size: 14px;
         font-weight: 400;
         color: #c5cad5; }
+    .content .section-buy :nth-child(3n) {
+      margin-right: 0; }
     .content .section-buy .center {
-      padding-top: 110px;
-      padding-bottom: 110px; }
+      padding-bottom: 110px;
+      padding-top: 110px; }
   .content .section-work {
     padding-bottom: 100px;
-    padding-top: 100px; }
+    padding-top: 55px; }
     .content .section-work-content {
       margin-bottom: 60px; }
       .content .section-work-content .description {
@@ -346,27 +360,29 @@ a {
         height: 370px;
         position: relative; }
         .content .section-work-images .item1 .image1 {
-          width: 750px;
+          width: 765px;
           height: 370px; }
         .content .section-work-images .item1 .image2 {
           width: 360px;
           height: 370px; }
       .content .section-work-images .item2 {
-        -webkit-transition: 0.3s;
-        transition: 0.3s;
         height: 270px;
         position: relative; }
         .content .section-work-images .item2 .image3 {
           width: 360px;
           height: 270px; }
-      .content .section-work-images .item1:hover::before, .content .section-work-images .item2:hover:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.3); }
+      .content .section-work-images-item {
+        margin-bottom: 45px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s; }
+        .content .section-work-images-item:hover::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.3); }
   .content .section-client {
     border: 1px solid #eeeeee; }
     .content .section-client-wrapper {
@@ -376,13 +392,21 @@ a {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       padding-bottom: 100px;
       padding-top: 100px; }
     .content .section-client-item {
       height: 75px;
-      width: 195px; }
+      width: 195px;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      margin-bottom: 20px; }
+    .content .section-client-item:hover {
+      opacity: 0.6; }
   .content .section-services {
     background: #eeeeee; }
     .content .section-services-wrapper {
@@ -421,11 +445,14 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
     .content .section-country-city {
-      width: 360px; }
+      width: 360px;
+      margin-right: 45px; }
       .content .section-country-city .image {
         height: 240px; }
         .content .section-country-city .image img {
@@ -459,6 +486,28 @@ a {
       .content .section-country-city .phone-email i {
         color: #17bed2;
         margin: 0 10px; }
+    .content .section-country :nth-child(3n) {
+      margin-right: 0px; }
+  .content .section-map {
+    height: 300px;
+    position: relative; }
+    .content .section-map iframe {
+      width: 100%;
+      height: 300px;
+      border: 0; }
+    .content .section-map::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.3); }
+  @media (max-width: 1024px) {
+    .content .section-map {
+      display: none; }
+    .content .footer {
+      border-top: 1px solid #eeeeee; } }
 
 /* ----- /content ----- */
 /* -----  footer  ----- */
@@ -466,13 +515,21 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 80px;
-  padding-bottom: 80px; }
+  padding-bottom: 80px;
+  padding-top: 100px; }
   .footer .footer-wrapper ul {
     margin-right: 120px; }
     .footer .footer-wrapper ul :not(:last-child) {
       margin-bottom: 20px; }
     .footer .footer-wrapper ul a {
-      color: #515769; }
+      color: #515769;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+    .footer .footer-wrapper ul :hover {
+      color: #abacaf; }
+
+@media (max-width: 1024px) {
+  .footer {
+    border-top: 1px solid #eeeeee; } }
 
 /* ----- /footer  ----- */
